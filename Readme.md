@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Igor Gnezdilov](https://up.htmlacademy.ru/adaptive/13/user/174995).
-* Наставник: `Неизвестно`.
+* Наставник: [Влад Слепкан](https://htmlacademy.ru/profile/id383197).
 
 ---
 
