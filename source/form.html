@@ -2,33 +2,38 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Приложение Pink</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo-link">
-        <img src="http://placehold.it/150x100" width="150" height="100" class="logo page-header__logo" alt="Pink">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a class="nav-list__link">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Фотографии</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Конкурс</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Html Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+          <div class="main-nav__wrapper-nav">
+            <a href="index.html" class="main-nav__logo-link">
+              <img src="http://placehold.it/150x100" width="150" height="100" class="logo main-nav__logo" alt="Pink">
+            </a>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item">
+                <a class="nav-list__link">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Фотографии</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Конкурс</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Html Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <section class="page-title">
         <div class="page-title__wrapper">
           <h1 class="page-title__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -36,9 +41,11 @@
       </section>
     </header>
     <main class="main-form">
-      <p class="main-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+      <p class="main-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        <span>Пожалуйста, заполните форму ниже:</span>
+      </p>
       <section class="main-form__contest">
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="main-form__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="fieldset fieldset_name">
             <div class="fieldset__item">
               <label for="surname" class="label label_heading">Фамилия:</label>
@@ -53,63 +60,64 @@
               <input type="text" class="input-textbox" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже"></input>
             </div>
           </fieldset>
-          <div class="fieldset__wrapper">
-            <fieldset class="fieldset fieldset_achievements">
+          <div class="fieldset__wrapper fieldset__wrapper_achievements">
+            <fieldset class="fieldset fieldset_achievements fieldset_border">
               <legend class="fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="selfie" id="selfie" checked></input>
                 <label for="selfie" class="label">Сделал селфи с акулой</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="beach" id="beach" checked></input>
                 <label for="beach" class="label">Обгорел на пляже</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="norris" id="norris"></input>
                 <label for="norris" class="label">Видел Чака Норриса</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="souvenirs" id="souvenirs"></input>
                 <label for="souvenirs" class="label">Накупил сувениров</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="tower" id="tower" checked></input>
                 <label for="tower" class="label">Удержал башню</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="checkbox" class="input-checkbox" name="hotel" id="hotel"></input>
                 <label for="hotel" class="label">Разгромил отель</label>
               </div>
             </fieldset>
           </div>
-          <fieldset class="fieldset fieldset_contacts">
-            <div class="fieldset__item">
+          <fieldset class="fieldset fieldset_contacts fieldset_border">
+            <legend class="fieldset__legend fieldset__legend_contacts">Контактная информация</legend>
+            <div class="fieldset__item fieldset__item_contacts">
               <label for="tel" class="label label_heading">Номер телефона</label>
               <input type="text" class="input-textbox" name="tel" id="tel" placeholder="Номер, пожалуйста"></input>
             </div>
-            <div class="fieldset__item">
+            <div class="fieldset__item fieldset__item_contacts">
               <label for="email" class="label label_heading">Адрес почты</label>
               <input type="text" class="input-textbox" name="email" id="email" placeholder="Введите почту*"></input>
             </div>
           </fieldset>
-          <div class="fieldset__wrapper">
-            <fieldset class="fieldset">
+          <div class="fieldset__wrapper fieldset__wrapper_app">
+            <fieldset class="fieldset fieldset_border fieldset_width">
               <legend class="fieldset__legend">С каким приложением путешествовали?</legend>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="radio" class="input-radio" name="travel-app" id="ios" checked></input>
                 <label for="ios" class="label">Pink для iOS</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="radio" class="input-radio" name="travel-app" id="android"></input>
                 <label for="android" class="label">Pink на Android</label>
               </div>
-              <div class="fieldset__item">
+              <div class="fieldset__item fieldset__item_row">
                 <input type="radio" class="input-radio" name="travel-app" id="windows"></input>
                 <label for="windows" class="label">Windows Phone</label>
               </div>
             </fieldset>
           </div>
-          <fieldset class="fieldset fieldset_textarea">
+          <fieldset class="fieldset fieldset_textarea fieldset_border">
             <legend class="fieldset__legend fieldset__legend_story">Опишите свои эмоции</legend>
             <textarea name="text" class="textarea-story" id="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
@@ -118,7 +126,7 @@
               <span class="button__text button__text_uppercase">Отправить форму</span>
             </button>
             <div class="main-form__require">
-              <span class="main-form__require-note">*</span> — обязательные поля
+              <span class="main-form__require-note">*</span> — обязательные <span class="main-form__require-filling">для заполнения</span> поля
             </div>
           </div>
         </form>
@@ -132,13 +140,13 @@
         <div class="footer-social">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Твиттер"></a>
+              <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Twitter"></a>
             </li>
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Фэйсбук"></a>
+              <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Facebook"></a>
             </li>
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="Ютуб"></a>
+              <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="YouTube"></a>
             </li>
           </ul>
         </div>

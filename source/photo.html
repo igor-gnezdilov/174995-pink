@@ -2,36 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Приложение Pink</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo-link">
-        <img src="http://placehold.it/150x100"  width="150" height="100" class="logo page-header__logo" alt="Pink">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a class="nav-list__link">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Фотографии</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Конкурс</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link">Html Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+          <div class="main-nav__wrapper-nav">
+            <a href="index.html" class="main-nav__logo-link">
+              <img src="http://placehold.it/150x100"  width="150" height="100" class="logo main-nav__logo" alt="Pink">
+            </a>
+            <button class="main-nav__toggle" type="button">Открыть меню</button>
+          </div>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item">
+                <a class="nav-list__link">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Фотографии</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Конкурс</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link">Html Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <section class="page-title">
         <div class="page-title__wrapper">
-          <h1 class="page-title__text">Фотографии пользователей</h1>
+          <h1 class="page-title__text page-title__text_photo">Фотографии пользователей</h1>
         </div>
       </section>
     </header>
@@ -39,60 +44,62 @@
       <section class="page-main__photos-wrapper">
         <p class="page-main__photo-title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <section class="user-photo-list">
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img user-photo-item__img_panorama" alt="">
-            <div class="user-photo-item__description">
+          <img src="./img/panorama-mobile@1x.jpg" width="320" height="137" class="user-photo-item__img user-photo-item__img_panorama" alt="">
+          <div class="user-photo-item user-photo-item_panorama">
+            <div class="user-photo-item__description user-photo-item__description_panorama">
               <b class="user-photo-item__name">Анна <span>(5 минут назад)</span></b>
               <p class="user-photo-item__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
               <p class="user-photo-item__like">Нравится: 250</p>
             </div>
           </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100"  class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Левон <span>(5 часов назад)</span></b>
-              <p class="user-photo-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="user-photo-item__like">Нравится: 356</p>
+          <div class="user-photo-list__wrapper">
+            <div class="user-photo-item">
+              <img src="./img/photo-car-mobile@1x.jpg" width="280" height="180"  class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Левон <span>(5 часов назад)</span></b>
+                <p class="user-photo-item__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <p class="user-photo-item__like">Нравится: 356</p>
+              </div>
             </div>
-          </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Антон <span>(12 часов назад)</span></b>
-              <p class="user-photo-item__text">Соседи будут рады!</p>
-              <p class="user-photo-item__like">Нравится: 666</p>
+            <div class="user-photo-item">
+              <img src="./img/photo-drumset-mobile@1x.jpg" width="280" height="180" class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Антон <span>(12 часов назад)</span></b>
+                <p class="user-photo-item__text">Соседи будут рады!</p>
+                <p class="user-photo-item__like">Нравится: 666</p>
+              </div>
             </div>
-          </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Борис <span>(20 часов назад)</span></b>
-              <p class="user-photo-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="user-photo-item__like">Нравится: 215</p>
+            <div class="user-photo-item">
+              <img src="./img/photo-window-mobile@1x.jpg" width="280" height="180" class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Борис <span>(20 часов назад)</span></b>
+                <p class="user-photo-item__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="user-photo-item__like">Нравится: 215</p>
+              </div>
             </div>
-          </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Сергей <span>(25 часов назад)</span></b>
-              <p class="user-photo-item__text">Самая кубанская в мире!</p>
-              <p class="user-photo-item__like">Нравится: 4</p>
+            <div class="user-photo-item">
+              <img src="./img/photo-fair-mobile@1x.jpg" width="280" height="180" class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Сергей <span>(25 часов назад)</span></b>
+                <p class="user-photo-item__text">Самая кубанская в мире!</p>
+                <p class="user-photo-item__like">Нравится: 4</p>
+              </div>
             </div>
-          </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Максим <span>(40 часов назад)</span></b>
-              <p class="user-photo-item__text">Где снег-то?</p>
-              <p class="user-photo-item__like">Нравится: 150</p>
+            <div class="user-photo-item">
+              <img src="./img/photo-pov-mobile@1x.jpg" width="280" height="180" class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Максим <span>(40 часов назад)</span></b>
+                <p class="user-photo-item__text">Где снег-то?</p>
+                <p class="user-photo-item__like">Нравится: 150</p>
+              </div>
             </div>
-          </div>
-          <div class="user-photo-item">
-            <img src="http://placehold.it/150x100" width="150" height="100" class="user-photo-item__img" alt="">
-            <div class="user-photo-item__description">
-              <b class="user-photo-item__name">Надежда <span>(45 часов назад)</span></b>
-              <p class="user-photo-item__text">Всем GM и взаимные лайки!</p>
-              <p class="user-photo-item__like">Нравится: 2560</p>
+            <div class="user-photo-item">
+              <img src="./img/photo-wing-mobile@1x.jpg" width="280" height="180" class="user-photo-item__img" alt="">
+              <div class="user-photo-item__description">
+                <b class="user-photo-item__name">Надежда <span>(45 часов назад)</span></b>
+                <p class="user-photo-item__text">Всем GM и взаимные лайки!</p>
+                <p class="user-photo-item__like">Нравится: 2560</p>
+              </div>
             </div>
           </div>
         </section>
@@ -103,25 +110,27 @@
           Выкладывайте все, что накопилось в телефоне!</p>
           <div class="loader__form-wrapper">
             <form class="loader__form">
-              <img src="http://placehold.it/150x100" width="150" height="100" class="loader-form__photo" alt="">
-              <div class="loader-editor">
-                <div class="loader-editor__icons">
-                  <button type="button" class="button-icon button-icon_crop"></button>
-                  <button type="button" class="button-icon button-icon_fill"></button>
-                  <button type="button" class="button-icon button-icon_contrast"></button>
-                </div>
-                <div class="loader-editor__scale">
-                  <div class="loader-editor__toggle">
+              <img src="./img/photo-road-mobile@1x.jpg" width="280" height="374" class="loader-form__photo" alt="">
+              <div class="loader__form_tool">
+                <div class="loader-editor">
+                  <div class="loader-editor__icons">
+                    <button type="button" class="button-icon button-icon_crop"></button>
+                    <button type="button" class="button-icon button-icon_fill"></button>
+                    <button type="button" class="button-icon button-icon_contrast"></button>
+                  </div>
+                  <div class="loader-editor__scale">
+                    <div class="loader-editor__toggle">
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="loader-post">
-                <button type="submit" class="button button_load button_load-post">
-                  <span class="button__text">Запостить</span>
-                </button>
-                <button type="reset" class="button button_load button_load-cancel">
-                  <span class="button__text">Отмена</span>
-                </button>
+                <div class="loader-post">
+                  <button type="submit" class="button button_load button_load-post">
+                    <span class="button__text">Запостить</span>
+                  </button>
+                  <button type="reset" class="button button_load button_load-cancel">
+                    <span class="button__text">Отмена</span>
+                  </button>
+                </div>
               </div>
             </form>
           </div>
@@ -131,18 +140,18 @@
     <footer class="page-footer">
       <section class="page-footer__links">
         <a class="page-footer__logo-link">
-          <img src="http://placehold.it/150x100" class="logo logo_icon" width="150" height="100" alt="Пинк">
+          <img src="http://placehold.it/150x100" class="logo logo_icon" width="150" height="100" alt="Pink">
         </a>
         <div class="footer-social">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Твиттер"></a>
+              <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Twitter"></a>
             </li>
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Фэйсбук"></a>
+              <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Facebook"></a>
             </li>
             <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="Ютуб"></a>
+              <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="YouTube"></a>
             </li>
           </ul>
         </div>

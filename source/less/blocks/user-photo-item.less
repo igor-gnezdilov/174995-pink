@@ -1,5 +1,7 @@
 .user-photo-item {
   padding-bottom: 20px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .user-photo-item__description {
@@ -24,4 +26,40 @@
   font-size: 12px;
   color: @strong-pink;
   text-transform: @text-transform;
+}
+
+.user-photo-item__img {
+  width: 280px;
+  margin-bottom: -10px;
+
+  &_panorama {
+    width: 100%;
+  }
+}
+
+@media (min-width: 660px) {
+  .user-photo-item {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+
+    &_panorama {
+      width: 620px;
+      margin: 0 auto;
+    }
+  }
+
+  .user-photo-item__description {
+    min-height: 155px;
+
+    &_panorama {
+      min-height: auto;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .user-photo-item_panorama {
+    width: 940px;
+  }
 }

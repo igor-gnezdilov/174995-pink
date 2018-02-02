@@ -1,7 +1,16 @@
 .price {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
   background-color: @light-gray;
   padding-top: 91px;
   padding-bottom: 26px;
+}
+
+.price__table {
+  width: 840px;
 }
 
 .price__head {
@@ -14,6 +23,8 @@
 .price__cost {
   font-size: @max-font;
   font-weight: 100;
+  display: flex;
+  flex-direction: column;
 }
 
 .price__body {
@@ -22,4 +33,27 @@
 
 .price__item {
   text-transform: @text-transform;
+  border-bottom: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+}
+
+@media (min-width: 660px) {
+  .price {
+    padding-bottom: 70px;
+  }
+
+  .price__table {
+    width: 620px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .price {
+    padding-bottom: 95px;
+  }
+
+  .price__table {
+    width: 940px;
+  }
 }
