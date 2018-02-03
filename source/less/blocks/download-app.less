@@ -1,0 +1,66 @@
+.download-app {
+  display: flex;
+  justify-content: center;
+  background-color: #1d2631;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.download-app__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 213px;
+  width: 280px;
+}
+
+.download-app__title {
+  display: none;
+}
+
+.download-app__list {
+  width: 280px;
+}
+
+.download-app__text {
+  line-height: 24px;
+  color: @white;
+  text-align: @text-align;
+}
+
+@media (min-width: 660px) {
+  .download-app {
+    justify-content: flex-start;
+    width: 620px;
+    background-color: transparent;
+    margin: 0 auto;
+    margin-top: -510px;
+  }
+
+  .download-app__wrapper {
+    width: 300px;
+  }
+
+  .download-app__title {
+    display: inline;
+    font-size: 40px;
+    line-height: 48px;
+    color: @white;
+    text-align: @text-align;
+    margin-bottom: 30px;
+    width: 200px;
+  }
+
+  .download-app__text {
+    font-size: @medium-font;
+  }
+}
+
+@media (min-width: 1200px) {
+  .download-app {
+    width: 940px;
+    margin-top: -657px;
+  }
+}

@@ -1,0 +1,52 @@
+@base-font: 14px;
+@medium-font: 18px;
+@max-font: 24px;
+@text-align: center;
+@text-transform: uppercase;
+@white: #ffffff;
+@light-gray: #f2f2f2;
+@strong-pink: #d22856;
+
+body {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  line-height: 30px;
+  color: #283645;
+  font-size: @base-font;
+  font-weight: 400;
+  background-color: @white;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}

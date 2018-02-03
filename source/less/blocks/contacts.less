@@ -1,0 +1,40 @@
+.contacts__wrapper {
+  text-align: @text-align;
+  margin-bottom: 20px;
+}
+
+.contacts__title {
+  font-size: @medium-font;
+  font-weight: 700;
+}
+
+.contacts__info {
+  font-size: @max-font;
+  color: @strong-pink;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 660px) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .contacts__info {
+    width: 298px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts {
+    flex-wrap: nowrap;
+  }
+
+  .contacts__wrapper_order {
+    order: 3;
+  }
+}

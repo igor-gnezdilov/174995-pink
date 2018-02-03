@@ -1,0 +1,27 @@
+.nav-list {
+  list-style-type: none;
+  background-color: #283645;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav-list__link {
+  line-height: 32px;
+  font-size: @medium-font;
+  font-weight: 700;
+  color: @white;
+  text-transform: @text-transform;
+}
+
+@media (min-width: 1200px) {
+  .nav-list {
+    background-color: transparent;
+  }
+
+  .nav-list__link {
+    padding-left: 80px;
+    font-weight: 400;
+    text-transform: none;
+  }
+}

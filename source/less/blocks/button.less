@@ -1,0 +1,62 @@
+.button {
+  font-size: @medium-font;
+  font-weight: 700;
+  line-height: 18px;
+  color: @white;
+  border: 3px solid;
+  border-radius: 30px;
+
+  &_download {
+    padding: 14px 33px 17px 37px;
+    background-color: #1d2631;
+  }
+
+  &_main-form {
+    padding: 14px 44px;
+    line-height: 30px;
+    border-color: #2aab6d;
+    background-color: #2aab6d;
+    border-radius: 3px;
+  }
+
+  &_load {
+    padding: 14px 33px 17px 37px;
+    line-height: 18px;
+    text-align: @text-align;
+  }
+
+  &_load-post {
+    color: @strong-pink;
+    border-color: @strong-pink;
+  }
+
+  &_load-cancel {
+    color: rgba(40, 54, 69, 0.1);
+    border-color: rgba(40, 54, 69, 0.1);
+  }
+}
+
+@media (min-width: 660px) {
+  .button_download {
+    background-color: transparent;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button_download {
+    font-size: 21px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .button_main-form {
+    padding-left: 54px;
+    padding-right: 54px;
+  }
+
+  .button_load {
+    width: 183px;
+  }
+}

@@ -1,0 +1,16 @@
+.label {
+  font-size: @medium-font;
+  padding-left: 20px;
+
+  &_heading {
+    font-size: @base-font;
+    color: @strong-pink;
+    text-transform: @text-transform;
+  }
+}
+
+@media (min-width: 660px) {
+  .label_heading {
+    padding-left: 0;
+  }
+}

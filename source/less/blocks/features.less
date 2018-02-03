@@ -1,0 +1,127 @@
+.features__header {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.features__header-title {
+  font-size: @max-font;
+  text-align: @text-align;
+  font-weight: 300;
+  margin: 28px 0 28px;
+}
+
+.features__item {
+  text-align: @text-align;
+}
+
+.features__title {
+  line-height: 24px;
+  font-size: @medium-font;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features__text {
+  line-height: 24px;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 280px;
+  padding-top: 80px;
+}
+
+.features__wrapper {
+  background-color: @light-gray;
+}
+
+.features__item_img {
+  padding-bottom: 327px;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 172px;
+}
+
+@media (min-width: 660px) {
+  .features {
+    padding-top: 110px;
+  }
+
+  .features__header {
+    width: 620px;
+    padding-bottom: 45px;
+  }
+
+  .features__header-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .features__header-title:first-child {
+    margin-bottom: 0;
+    margin-top: 40px;
+  }
+
+  .features__header-title:last-child {
+    width: 335px;
+    margin: 0 auto;
+  }
+
+  .features__list {
+    width: 620px;
+  }
+
+  .features__item {
+    width: 320px;
+    text-align: left;
+
+    &_img {
+      background-image: none;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .features {
+    padding-top: 40px;
+  }
+
+  .features__header {
+    width: 820px;
+    padding-top: 250px;
+  }
+
+  .features__header-title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .features__header-title:last-child {
+    width: 450px;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 940px;
+  }
+
+  .features__item {
+    width: 230px;
+    text-align: center;
+  }
+
+  .features__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .features__text {
+    font-size: 18px;
+  }
+}
