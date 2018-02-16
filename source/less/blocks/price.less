@@ -9,8 +9,7 @@
   padding-bottom: 50px;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-size: 101% auto;
-  background-position: 50% 0;
+  background-size: contain;
 }
 
 .price .icon-yes,
@@ -55,7 +54,7 @@
   }
 }
 
-.price__cost {
+.price__title span {
   font-size: @max-font;
   font-weight: 300;
   display: flex;
@@ -116,14 +115,9 @@
   }
 }
 
-.price__toggles {
-  margin-top: 50px;
-}
-
-
 @media (min-width: 660px) {
   .price {
-    padding-bottom: 20px;
+    padding-bottom: 70px;
   }
 
   .price .icon-yes,
@@ -198,7 +192,7 @@
 @media (min-width: 1200px) {
   .price {
     padding-top: 150px;
-    padding-bottom: 45px;
+    padding-bottom: 95px;
   }
 
   .price__ribbon {
