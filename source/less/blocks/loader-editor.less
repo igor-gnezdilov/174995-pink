@@ -1,11 +1,132 @@
-@media (min-width: 700px) {
+.loader-editor__scale {
+  position: relative;
+  padding-bottom: 35px;
+}
+
+.loader-editor__scale-mobile {
+  position: relative;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #dddfe0;
+}
+
+.loader-editor {
+  align-self: center;
+}
+
+.loader-editor__wrapper {
+  display: none;
+}
+
+.loader-editor__icons {
+  display: flex;
+}
+
+.loader-editor__scale_fill,
+.loader-editor__scale_contrast {
+  display: none;
+}
+
+.loader-editor__line {
+  display: block;
+  width: 245px;
+  height: 2px;
+  background-color: #283645;
+  margin-left: 10px;
+}
+
+.loader-editor__toggle {
+  position: absolute;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  top: -6px;
+  left: 216px;
+  background-color: @light-gray;
+  border: 2px solid #cd2856;
+  border-radius: 50%;
+
+  &_crop {
+    left: 156px;
+  }
+
+  &_fill {
+    left: 42px;
+  }
+
+  &_contrast {
+    left: 111px;
+  }
+
+  &:active {
+    background-color: @strong-pink;
+  }
+}
+
+
+@media (min-width: 660px) {
   .loader-editor {
     display: flex;
     flex-direction: row;
+    align-self: auto;
+    width: 276px;
+    margin-left: 20px;
+  }
+
+  .loader-editor__scale-mobile {
+    display: none;
+  }
+
+  .loader-editor__wrapper {
+    display: flex;
+    width: 273px;
+    border-bottom: 1px solid #dddfe0;
   }
 
   .loader-editor__icons {
-    display: flex;
-    flex-direction: column;
+    display: none;
+  }
+
+  .loader-editor__range {
+    width: 204px;
+    padding-top: 20px;
+  }
+
+  .loader-editor__scale {
+    position: relative;
+    width: 280px;
+    margin-top: 30px;
+    padding-right: 10px;
+    z-index: 1;
+  }
+
+  .loader-editor__line {
+    display: block;
+    width: 204px;
+    height: 2px;
+    background-color: #283645;
+  }
+}
+
+@media (min-width: 1200px) {
+  .loader-editor__wrapper {
+    width: 390px;
+  }
+
+  .loader-editor__line {
+    width: 288px;
+  }
+
+  .loader-editor__toggle {
+    &_crop {
+      left: 97px;
+    }
+
+    &_fill {
+      left: 252px;
+    }
+
+    &_contrast {
+      left: 181px;
+    }
   }
 }

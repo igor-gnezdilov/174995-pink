@@ -7,28 +7,28 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header_nojs">
       <div class="page-header__wrapper">
         <nav class="main-nav">
           <div class="main-nav__wrapper-nav">
             <a href="index.html" class="main-nav__logo-link">
-              <img src="http://placehold.it/150x100" width="150" height="100" class="logo main-nav__logo" alt="Pink">
+              <img src="./img/logo-pink-white-mobile.svg" width="75" height="22" class="logo main-nav__logo" alt="Пинк">
             </a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
+            <button class="main-nav__toggle" type="button" title="Открыть меню"></button>
           </div>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
               <li class="nav-list__item">
-                <a class="nav-list__link">Главная</a>
+                <a href="index.html" class="nav-list__link">Главная</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link">Фотографии</a>
+                <a href="photo.html" class="nav-list__link">Фотографии</a>
               </li>
-              <li class="nav-list__item">
+              <li class="nav-list__item nav-list__item_active">
                 <a class="nav-list__link">Конкурс</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__link">Html Academy</a>
+                <a href="https://htmlacademy.ru/intensive/adaptive" class="nav-list__link">Html Academy</a>
               </li>
             </ul>
           </div>
@@ -41,85 +41,113 @@
       </section>
     </header>
     <main class="main-form">
-      <p class="main-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-        <span>Пожалуйста, заполните форму ниже:</span>
-      </p>
       <section class="main-form__contest">
-        <form class="main-form__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="main-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <span>Пожалуйста, заполните форму ниже:</span>
+        </p>
+        <form action="https://echo.htmlacademy.ru" method="post" class="main-form__form">
           <fieldset class="fieldset fieldset_name">
-            <div class="fieldset__item">
+            <div class="fieldset__item fieldset__item-name">
               <label for="surname" class="label label_heading">Фамилия:</label>
-              <input type="text" class="input-textbox" name="surname" id="surname" placeholder="Укажите фамилию*"></input>
+              <input type="text" class="input-textbox" name="surname" id="surname" placeholder="Укажите фамилию *">
             </div>
-            <div class="fieldset__item">
+            <div class="fieldset__item fieldset__item-name">
               <label for="name" class="label label_heading">Имя:</label>
-              <input type="text" class="input-textbox" name="name" id="name" placeholder="Введите ваше имя*"></input>
+              <input type="text" class="input-textbox" name="name" id="name" placeholder="Введите ваше имя *">
             </div>
-            <div class="fieldset__item">
+            <div class="fieldset__item fieldset__item-name">
               <label for="middle-name" class="label label_heading">Отчество:</label>
-              <input type="text" class="input-textbox" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже"></input>
+              <input type="text" class="input-textbox" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже">
             </div>
           </fieldset>
           <div class="fieldset__wrapper fieldset__wrapper_achievements">
             <fieldset class="fieldset fieldset_achievements fieldset_border">
               <legend class="fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="selfie" id="selfie" checked></input>
-                <label for="selfie" class="label">Сделал селфи с акулой</label>
-              </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="beach" id="beach" checked></input>
-                <label for="beach" class="label">Обгорел на пляже</label>
-              </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="norris" id="norris"></input>
-                <label for="norris" class="label">Видел Чака Норриса</label>
-              </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="souvenirs" id="souvenirs"></input>
-                <label for="souvenirs" class="label">Накупил сувениров</label>
-              </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="tower" id="tower" checked></input>
-                <label for="tower" class="label">Удержал башню</label>
-              </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="checkbox" class="input-checkbox" name="hotel" id="hotel"></input>
-                <label for="hotel" class="label">Разгромил отель</label>
+              <div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="selfie" id="selfie" checked>
+                  <label for="selfie" class="label label__checkbox">Сделал селфи с акулой
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="beach" id="beach" checked>
+                  <label for="beach" class="label label__checkbox">Обгорел на пляже
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="norris" id="norris">
+                  <label for="norris" class="label label__checkbox label__checkbox_margin">Видел Чака Норриса
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="souvenirs" id="souvenirs">
+                  <label for="souvenirs" class="label label__checkbox label__checkbox_margin">Накупил сувениров
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="tower" id="tower" checked>
+                  <label for="tower" class="label label__checkbox label__checkbox_margin">Удержал башню
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
+                <div class="fieldset__item fieldset__item_row">
+                  <input type="checkbox" class="input-checkbox" name="hotel" id="hotel">
+                  <label for="hotel" class="label label__checkbox label__checkbox_margin">Разгромил отель
+                    <svg class="icon-yes" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="21" viewBox="-82.357 4.875 21.698 16.09" enable-background="new -82.357 4.875 21.698 16.09" xml:space="preserve">
+                      <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.0 C-60.562,6.191-60.562,5.558-60.953,5.167z"/>
+                    </svg>
+                  </label>
+                </div>
               </div>
             </fieldset>
           </div>
           <fieldset class="fieldset fieldset_contacts fieldset_border">
             <legend class="fieldset__legend fieldset__legend_contacts">Контактная информация</legend>
-            <div class="fieldset__item fieldset__item_contacts">
-              <label for="tel" class="label label_heading">Номер телефона</label>
-              <input type="text" class="input-textbox" name="tel" id="tel" placeholder="Номер, пожалуйста"></input>
-            </div>
-            <div class="fieldset__item fieldset__item_contacts">
-              <label for="email" class="label label_heading">Адрес почты</label>
-              <input type="text" class="input-textbox" name="email" id="email" placeholder="Введите почту*"></input>
-            </div>
+            <div>
+              <div class="fieldset__item fieldset__item_contacts">
+                <label for="tel" class="label label_heading-contacts">Номер телефона</label>
+                <input type="text" class="input-textbox" name="tel" id="tel" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="fieldset__item fieldset__item_contacts">
+                <label for="email" class="label label_heading-contacts">Адрес почты</label>
+                <input type="text" class="input-textbox" name="email" id="email" placeholder="Введите почту *">
+              </div>
+          </div>
           </fieldset>
           <div class="fieldset__wrapper fieldset__wrapper_app">
             <fieldset class="fieldset fieldset_border fieldset_width">
               <legend class="fieldset__legend">С каким приложением путешествовали?</legend>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="radio" class="input-radio" name="travel-app" id="ios" checked></input>
-                <label for="ios" class="label">Pink для iOS</label>
+              <div class="fieldset__item fieldset__item_width">
+                <input type="radio" class="input-radio" name="travel-app" id="ios" checked>
+                <label for="ios" class="label label__radio">Pink для iOS</label>
               </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="radio" class="input-radio" name="travel-app" id="android"></input>
-                <label for="android" class="label">Pink на Android</label>
+              <div class="fieldset__item fieldset__item_width">
+                <input type="radio" class="input-radio" name="travel-app" id="android">
+                <label for="android" class="label label__radio">Pink на Android</label>
               </div>
-              <div class="fieldset__item fieldset__item_row">
-                <input type="radio" class="input-radio" name="travel-app" id="windows"></input>
-                <label for="windows" class="label">Windows Phone</label>
+              <div class="fieldset__item fieldset__item_width">
+                <input type="radio" class="input-radio" name="travel-app" id="windows">
+                <label for="windows" class="label label__radio">Windows Phone</label>
               </div>
             </fieldset>
           </div>
           <fieldset class="fieldset fieldset_textarea fieldset_border">
             <legend class="fieldset__legend fieldset__legend_story">Опишите свои эмоции</legend>
-            <textarea name="text" class="textarea-story" id="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea name="text" class="fieldset-textarea__story" rows="5" id="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="main-form__submit-wrapper">
             <button type="submit" class="button button_main-form">
@@ -133,28 +161,64 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="page-footer__links">
-        <a class="page-footer__logo-link">
-          <img src="http://placehold.it/150x100" class="logo logo_icon" width="150" height="100" alt="Пинк">
-        </a>
-        <div class="footer-social">
-          <ul class="footer-social__list">
-            <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Twitter"></a>
-            </li>
-            <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Facebook"></a>
-            </li>
-            <li class="footer-social__item">
-              <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="YouTube"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__developed">
-          <span class="page-footer__copyright-text">Разработано</span>
-          <a href="https://htmlacademy.ru" class="page-footer__copyright-link" aria-label="Html Academy"></a>
-        </div>
-      </section>
+      <div class="page-footer__container">
+        <section class="page-footer__links page-footer__links_form">
+          <a class="page-footer__logo-link">
+            <img src="./img/logo-pink-blue-mobile.svg" class="logo logo_icon" width="148" height="40" alt="Pink">
+          </a>
+          <div class="footer-social">
+            <ul class="footer-social__list">
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link footer-social__link_twitter" aria-label="Twitter">
+                  <svg class="footer-social__icon footer-social__icon_twitter" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link footer-social__link_facebook" aria-label="Facebook">
+                  <svg class="footer-social__icon footer-social__icon_facebook" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+                    <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social__item">
+                <a href="#" class="footer-social__link footer-social__link_youtube" aria-label="YouTube">
+                  <svg class="footer-social__icon footer-social__icon_youtube" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+                    <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__developed">
+            <a href="https://htmlacademy.ru" class="page-footer__copyright-link" aria-label="Html Academy">Разработано
+              <svg class="logo-htmlacademy" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+                <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
     </footer>
+    <div class="popup popup__success popup__success_hidden">
+      <b class="popup__title popup__title_success">Ваша заявка отправлена</b>
+      <p class="popup__message popup__message_success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В близжайшее время мы рассмотрим ее и оповестим вас.</p>
+      <div class="popup__wrapper popup__wrapper_success">
+        <button type="button" class="button button_popup"><span>Закрыть окно</span></button>
+      </div>
+    </div>
+      <div class="popup popup__failure popup__failure_hidden">
+        <b class="popup__title popup__title_failure">Что-то пошло не&nbsp;так!</b>
+        <p class="popup__message popup__message_failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <div class="popup__wrapper popup__wrapper_failure">
+        <button type="button" class="button button_popup button_popup-failure"><span>Ок</span></button>
+      </div>
+    </div>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>

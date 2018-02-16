@@ -1,16 +1,113 @@
 .label {
   font-size: @medium-font;
-  padding-left: 20px;
+  padding-left: 0;
 
-  &_heading {
+  &_heading,
+  &_heading-contacts {
     font-size: @base-font;
     color: @strong-pink;
     text-transform: @text-transform;
+    margin-bottom: 5px;
+    padding-left: 20px;
   }
 }
 
+.label__radio::before,
+.label__checkbox::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  margin-right: 31px;
+  background-color: @white;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.label__radio::before {
+  border-radius: 50%;
+}
+
+.label__checkbox,
+.label__radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.label__checkbox:hover::before,
+.label__radio:hover::before {
+  border-color: #283645;
+}
+
+.label__checkbox:active::before,
+.label__radio:active::before {
+  border-color: @strong-pink;
+}
+
+.input-radio:checked + .label__radio::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: @strong-pink;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  left: 12px;
+}
+
+.input-checkbox + .label__checkbox:active .icon-yes,
+.input-checkbox:checked + .label__checkbox .icon-yes {
+  position: absolute;
+  display: block;
+  top: 9px;
+  left: 5px;
+  fill: @strong-pink;
+}
+
+.input-checkbox,
+.input-checkbox + .label__checkbox .icon-yes {
+  display: none;
+  cursor: pointer;
+}
+
 @media (min-width: 660px) {
-  .label_heading {
+  .label {
+    &_heading {
+      padding-left: 0;
+      padding-right: 19px;
+    }
+  }
+
+  .label__checkbox {
     padding-left: 0;
+  }
+
+  .label__checkbox::before {
+    margin-right: 21px;
+  }
+
+  .label__radio::before {
+    margin-right: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .label {
+    &_heading-contacts {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .label__checkbox {
+    &_margin {
+      margin-left: 22px;
+    }
+  }
+
+  .label__checkbox::before {
+    margin-right: 19px;
   }
 }

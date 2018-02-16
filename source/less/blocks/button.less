@@ -9,14 +9,35 @@
   &_download {
     padding: 14px 33px 17px 37px;
     background-color: #1d2631;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @white;
+      color: @strong-pink;
+      border-color: @white;
+    }
+
+    &:active {
+      color: rgba(210, 40, 86, 0.3);
+    }
   }
 
   &_main-form {
     padding: 14px 44px;
     line-height: 30px;
+    text-transform: @text-transform;
     border-color: #2aab6d;
     background-color: #2aab6d;
     border-radius: 3px;
+
+    &:hover {
+      background-color: #1c9b5e;
+      border-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &_load {
@@ -28,35 +49,155 @@
   &_load-post {
     color: @strong-pink;
     border-color: @strong-pink;
+    margin-top: 39px;
+
+    &:hover {
+      color: @white;
+      background-color: @strong-pink;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &_load-cancel {
     color: rgba(40, 54, 69, 0.1);
     border-color: rgba(40, 54, 69, 0.1);
+    margin-top: 11px;
+
+    &:hover {
+      color: rgba(40, 54, 69, 0.3);
+      border-color: #b5b9be;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: rgba(40, 54, 69, 0.3);
+      border-color: #b5b9be;
+    }
+  }
+
+  &_popup {
+    border-color: #2aab6d;
+    background-color: #2aab6d;
+    border-radius: 3px;
+    padding: 20px 65px;
+    min-width: 280px;
+    text-transform: @text-transform;
   }
 }
 
+.button-icon {
+  width: 50px;
+  height: 50px;
+  background-color: inherit;
+  border: none;
+  margin: 20px;
+  padding: 0;
+}
+
+.button-icon_crop svg {
+  fill: @strong-pink;
+}
+
+.button-icon:hover svg {
+  opacity: 0.5;
+}
+
+.button-icon:active svg {
+  fill: @strong-pink;
+  opacity: 1;
+}
+
+.button-icon_fill svg {
+  fill: #283645;
+  opacity: 0.3;
+  margin-top: 5px;
+}
+
+.button-icon_contrast svg {
+  fill: #283645;
+  opacity: 0.3;
+  margin-top: 10px;
+}
+
 @media (min-width: 660px) {
-  .button_download {
+  .button {
+    &_download {
+      background-color: transparent;
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
+    &_popup {
+      width: 300px;
+    }
+
+    &_load-post {
+      margin-bottom: 24px;
+    }
+
+    &_load-cancel {
+      margin-top: 0;
+    }
+  }
+
+  .button-icon {
     background-color: transparent;
-    padding-left: 45px;
-    padding-right: 45px;
+    border: none;
+    margin: 5px 15px 7px 0;
+  }
+
+  .button-icon_contrast svg {
+    width: 19px;
+    fill: @strong-pink;
+    opacity: 1;
+  }
+
+  .button-icon_fill svg,
+  .button-icon_crop svg {
+    width: 26px;
+    fill: @strong-pink;
+    opacity: 1;
   }
 }
 
 @media (min-width: 1200px) {
-  .button_download {
-    font-size: 21px;
-    padding-left: 28px;
-    padding-right: 28px;
+  .button {
+    &_download {
+      font-size: 21px;
+      padding-left: 28px;
+      padding-right: 28px;
+      opacity: 1;
+    }
+
+    &_load {
+      width: 183px;
+    }
+
+    &_load-cancel {
+      margin-top: 0;
+      margin-left: 44px;
+    }
+
+    &_load-post {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &_main-form {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
   }
 
-  .button_main-form {
-    padding-left: 54px;
-    padding-right: 54px;
+  .button-icon_fill svg,
+  .button-icon_crop svg {
+    width: 48px;
   }
 
-  .button_load {
-    width: 183px;
+  .button-icon_contrast svg {
+    width: 32px;
   }
 }
