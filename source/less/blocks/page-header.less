@@ -2,26 +2,142 @@
   background-color: #283645;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 358px 462px;
+  background-size: cover;
   background-position: 50% 0;
   min-height: 237px;
 }
 
-.page-header__wrapper {
-  background-color: rgba(0, 0, 0, 0.5);
+.page-header__hand {
+  height: 465px;
+}
+
+.page-header_js .page-title {
+  padding-top: 65px;
+  height: 171px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-header_closed .main-nav__logo-link {
+  padding-top: 21px;
+  padding-bottom: 12px;
+}
+
+@media (max-width: 1199px) {
+  .page-header {
+    &_nojs {
+      width: 100%;
+    }
+  }
+
+  .page-header_nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .page-header_js .page-header__wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .page-header_js .page-header_opened .main-nav__toggle {
+    display: block;
+    width: 34px;
+    height: 37px;
+  }
+
+  .page-header_opened .main-nav .main-nav__toggle {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 18px;
+      left: 6px;
+      width: 29px;
+      height: 4px;
+      background-color: @white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: @strong-pink;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: @strong-pink;
+      opacity: 0.3;
+    }
+  }
+
+  .page-header_closed .main-nav__toggle::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: @white;
+    box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+    cursor: pointer;
+  }
+
+  .page-header_closed .main-nav__list {
+    display: none;
+  }
+
+  .page-header_closed .main-nav {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 @media (min-width: 660px) {
   .page-header {
-    min-height: 441px;
+    min-height: 331px;
+  }
+
+  .page-header_nojs .page-title {
+    padding-top: 0;
+  }
+
+  .page-header_js .page-title {
+    padding-top: 110px;
   }
 
   .page-header__index {
     min-height: 729px;
   }
+
+  .page-header__hand {
+    height: 620px;
+  }
+
+  .page-header_closed .main-nav__logo-link {
+    padding-top: 44px;
+    padding-bottom: 34px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .page-header_js .page-title {
+    padding-top: 0;
+    height: 286px;
+  }
+
+  .page-header__wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
   .page-header {
     min-height: 395px;
   }

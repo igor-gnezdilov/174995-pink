@@ -1,4 +1,23 @@
 .input-textbox {
   font-size: @medium-font;
   line-height: 30px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 14px 20px;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    border-color: @strong-pink;
+    outline: 0;
+  }
+}
+
+@media (min-width: 660px) {
+  .input-textbox {
+    width: auto;
+    flex-grow: 1;
+  }
 }

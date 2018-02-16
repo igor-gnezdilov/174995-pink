@@ -5,7 +5,7 @@
 
 .main-form__title {
   text-align: @text-align;
-  padding-top: 45px;
+  padding-top: 50px;
   width: 280px;
   margin: 0 auto;
 }
@@ -39,8 +39,17 @@
 }
 
 @media (min-width: 660px) {
+  .main-form__contest {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
   .main-form__title {
     font-size: @medium-font;
+    padding-top: 90px;
     padding-left: 40px;
     padding-right: 40px;
     box-sizing: border-box;
@@ -57,20 +66,26 @@
     order: 5;
     min-height: 60px;
     padding-top: 60px;
-    width: 620px;
+    width: 100%;
   }
 }
 
 @media (min-width: 1200px) {
   .main-form__title {
     width: 858px;
+    padding-top: 92px;
+    padding-bottom: 65px;
   }
 
   .main-form__form {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 960px;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-form__contest {
+    padding: 0 10px;
   }
 
   .main-form__submit-wrapper {
