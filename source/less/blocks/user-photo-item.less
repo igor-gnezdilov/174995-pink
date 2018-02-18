@@ -7,7 +7,7 @@
 
 .user-photo-item__description {
   background-color: @light-gray;
-  padding: 18px 19px 20px;
+  padding: 18px 19px 15px;
   line-height: 24px;
 }
 
@@ -29,6 +29,7 @@
   padding-left: 30px;
   margin-bottom: 0;
   margin-top: auto;
+  top: -5px;
 
   &::before {
     position: absolute;
@@ -44,13 +45,6 @@
   }
 }
 
-.user-photo-item__img {
-  &_panorama {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 @media (min-width: 660px) {
   .user-photo-item {
     width: 300px;
@@ -60,25 +54,26 @@
     &_panorama {
       width: 620px;
       margin: 0 auto;
+      padding-bottom: 50px;
     }
   }
 
   .user-photo-item__text {
-    margin-bottom: 0;
+    position: relative;
+    margin-bottom: 36px;
   }
 
   .user-photo-item__text-panorama {
     order: 1;
+    margin-bottom: 0;
   }
 
   .user-photo-item__description {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 111px;
-    padding-top: 24px;
-    padding-left: 29px;
-    padding-right: 29px;
-    padding-bottom: 20px;
+    padding: 24px 29px 20px;
 
     &_panorama {
       min-height: auto;
@@ -88,17 +83,21 @@
     }
   }
 
+  .user-photo-item__like {
+    padding-left: 0;
+    position: absolute;
+    top: 108px;
+  }
+
   .user-photo-item__like-panorama {
+    position: relative;
     margin-top: 0;
     margin-left: auto;
   }
 
-  .user-photo-item__like {
-    padding-left: 0;
-  }
-
   .user-photo-item__description_panorama .user-photo-item__like {
-    padding-left: 30px;
+    top: 0;
+    right: 33px;
   }
 
   .user-photo-item__like::before {
@@ -106,17 +105,26 @@
   }
 
   .user-photo-item__description_panorama .user-photo-item__like::before {
-    left: 0;
+    left: 109px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .user-photo-item {
-    padding-bottom: 55px;
+    padding-bottom: 54px;
 
     &_panorama {
       width: 940px;
       padding-bottom: 50px;
+      min-height: auto;
     }
+  }
+
+  .user-photo-item__description {
+    padding-bottom: 20px;
+  }
+
+  .user-photo-item__description_panorama {
+    min-height: auto;
   }
 }

@@ -1,4 +1,5 @@
 .fieldset {
+  position: relative;
   border: none;
   margin: 0;
   width: 100%;
@@ -8,25 +9,23 @@
 
   &_name {
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 22px;
   }
 
   &_contacts {
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding-top: 18px;
+    padding-bottom: 23px;
+    width: 100%;
+  }
+
+  &_achievements div {
+    margin-top: 76px;
   }
 
   &_textarea {
     padding-top: 0;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
   }
-}
-
-.fieldset__wrapper {
-  background-color: @light-gray;
-  padding-top: 36px;
-  padding-bottom: 18px;
-  box-sizing: border-box;
 }
 
 .fieldset__legend {
@@ -34,7 +33,11 @@
   line-height: 18px;
   text-transform: @text-transform;
   text-align: @text-align;
-  margin-bottom: 27px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 280px;
 
   &_story {
     padding-top: 36px;
@@ -53,20 +56,24 @@
   &_row {
     flex-direction: row;
     align-items: baseline;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
 
   &_width {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-top: 75px;
+    }
   }
 }
 
 .fieldset_achievements .fieldset__legend {
-  width: 230px;
+  min-width: 230px;
 }
 
-.fieldset-textarea__story {
+.fieldset__textarea-story {
   font-size: @medium-font;
   padding-left: 20px;
   padding-right: 20px;
@@ -77,6 +84,11 @@
   border-radius: 2px;
   box-sizing: border-box;
   resize: none;
+  margin-top: 70px;
+
+  &::-webkit-input-placeholder {
+    color: #283645;
+  }
 
   &:hover {
     border-color: #283645;
@@ -88,30 +100,37 @@
   }
 }
 
+.fieldset__item_row:last-of-type {
+  margin-bottom: 20px;
+}
+
 @media (min-width: 660px) {
   .fieldset {
     margin-top: 50px;
 
     &_name {
       padding: 0;
+      margin-bottom: 5px;
     }
 
     &_border {
       border: 2px solid #e5e5e5;
       border-radius: 2px;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-left: 58px;
+      padding-right: 58px;
       box-sizing: border-box;
+      margin-top: 60px;
     }
 
     &_contacts {
       order: 2;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 45px;
+      padding-bottom: 20px;
     }
 
     &_textarea {
       order: 4;
+      margin-top: 67px;
     }
 
     &_row {
@@ -120,39 +139,36 @@
 
     &_width {
       padding-bottom: 20px;
+      margin-top: 53px;
     }
-  }
-
-  .fieldset__wrapper {
-    background-color: transparent;
-    padding-top: 0;
 
     &_achievements {
-      order: 3;
-    }
-
-    &_app {
-      order: 0;
+      margin-top: 65px;
     }
   }
 
   .fieldset__legend {
     line-height: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-bottom: 0;
+    top: -16px;
+    background-color: @white;
 
     &_story {
       padding-top: 0;
+      min-width: 260px;
     }
 
     &_contacts {
       display: block;
+      min-width: 260px;
+    }
+
+    &_app {
+      min-width: 367px;
     }
   }
 
   .fieldset_achievements .fieldset__legend {
-    width: auto;
+    min-width: 436px;
   }
 
   .fieldset__item {
@@ -160,6 +176,22 @@
 
     &_contacts {
       flex-direction: column-reverse;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+
+    &_contacts:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &_width {
+      &:last-of-type {
+        padding-bottom: 13px;
+      }
+
+      &:first-of-type {
+        margin-top: 54px;
+      }
     }
   }
 
@@ -172,18 +204,44 @@
     margin-bottom: 0;
   }
 
-  .fieldset-textarea__story {
-    margin-top: 37px;
+  .fieldset__textarea-story {
+    margin-top: 45px;
+    min-height: 190px;
   }
 
   .fieldset_achievements div {
     display: block;
-    margin-top: 31px;
-    margin-bottom: 10px;
+    margin-top: 51px;
+    margin-bottom: 46px;
+  }
+
+  .fieldset__contacts {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 62px;
+      height: 58px;
+      background-color: #e5e5e5;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px 19px;
+      top: 2px;
+      right: 2px;
+    }
+
+    &_phone::before {
+      background-image: url("../img/icon-phone.svg");
+    }
+
+    &_email::before {
+      background-image: url("../img/icon-mail.svg");
+    }
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .fieldset {
     margin-top: 0;
 
@@ -201,27 +259,35 @@
     }
 
     &_contacts {
-      padding-top: 30px;
+      padding-top: 41px;
       padding-bottom: 0;
-      margin-top: 30px;
+      margin-top: 55px;
     }
 
     &_achievements {
       padding-right: 0;
+      padding-left: 0;
+      width: 940px;
       min-height: 100%;
     }
 
     &_textarea {
-      margin-top: 30px;
+      margin-top: 65px;
+      padding-bottom: 38px;
     }
   }
 
   .fieldset__item {
     &_width {
-      margin-left: 75px;
       width: 288px;
       padding-bottom: 0;
+      margin-top: 38px;
+      margin-left: 75px;
       margin-bottom: 30px;
+
+      &:last-of-type {
+        padding-bottom: 20px;
+      }
     }
 
     &_contacts {
@@ -233,21 +299,26 @@
     &_row {
       width: 288px;
       padding-bottom: 0;
-      margin-bottom: 45px;
+      margin-bottom: 30px;
     }
   }
 
-  .fieldset__wrapper {
-    &_app {
-      margin-right: 0;
-      margin-left: 75px;
-      width: 46%;
-      box-sizing: border-box;
-    }
+  .fieldset_achievements p:nth-child(6n+1),
+  .fieldset_achievements p:nth-child(6n+2) {
+    width: 260px;
+    padding-left: 60px;
+  }
 
-    &_achievements {
-      margin-top: 50px;
-    }
+  .fieldset_achievements p:nth-child(6n+3),
+  .fieldset_achievements p:nth-child(6n+4) {
+    width: 240px;
+    padding-left: 55px;
+  }
+
+  .fieldset_achievements p:nth-child(6n+5),
+  .fieldset_achievements p:nth-child(6n+6) {
+    width: 260px;
+    padding-left: 52px;
   }
 
   .fieldset_contacts div {
@@ -259,11 +330,22 @@
   .fieldset_achievements div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 877px;
+    justify-content: flex-start;
+    width: 936px;
+    margin-top: 37px;
+    margin-bottom: 25px;
   }
 
   .fieldset_achievements p:nth-child(2n) {
     order: 2;
+  }
+
+  .fieldset__textarea-story {
+    min-height: 127px;
+    margin-top: 38px;
+  }
+
+  .fieldset__item-name {
+    margin-top: 19px;
   }
 }

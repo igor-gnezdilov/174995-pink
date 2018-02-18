@@ -33,9 +33,10 @@
   border-top: 1px solid #485461;
 }
 
-@media (max-width: 1199px) {
-  .nav-list__item_active .nav-list__link {
-    cursor: default;
+@media (max-width: 959px) {
+  .nav-list__item_active:hover .nav-list__link {
+    color: white;
+    opacity: 1;
   }
 
   .nav-list__link {
@@ -46,9 +47,10 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .nav-list {
     background-color: transparent;
+    border: none;
   }
 
   .nav-list__link {
@@ -62,8 +64,8 @@
   }
 
   .nav-list__item_active .nav-list__link {
-    cursor: default;
     position: relative;
+    cursor: default;
 
     &::after {
       position: absolute;

@@ -1,0 +1,38 @@
+.fieldset-wrapper {
+  background-color: @light-gray;
+  padding-top: 36px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 660px) {
+  .fieldset-wrapper {
+    background-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &_achievements {
+      order: 3;
+    }
+
+    &_app {
+      order: 0;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .fieldset-wrapper {
+    &_app {
+      margin-right: 0;
+      margin-left: 75px;
+      width: 46%;
+      box-sizing: border-box;
+      margin-top: 12px;
+    }
+
+    &_achievements {
+      margin-top: 70px;
+    }
+  }
+}
