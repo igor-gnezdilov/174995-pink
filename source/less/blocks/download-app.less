@@ -13,8 +13,8 @@
 .download-app__list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 265px;
+  justify-content: space-between;
+  width: 206px;
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -50,11 +50,19 @@
     left: -7px;
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: 258px 286px;
+    background-size: 258px 286px, contain;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-mobile@2x.png");
+    }
   }
 }
 
 @media (min-width: 660px) {
+  .download-app__wrapper {
+    width: 365px;
+  }
+
   .download-app__wrapper::before {
     background-image: none;
     width: 0;
@@ -63,18 +71,29 @@
 
   .download-app {
     justify-content: flex-start;
-    width: 620px;
+    width: 700px;
     background-color: transparent;
     margin: -610px auto 0;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: -16px 65px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-bottom: 103px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
   }
 
   .download-app__title {
     display: inline;
     font-size: 40px;
+    font-weight: 300;
     line-height: 48px;
     color: @white;
     text-align: @text-align;
-    margin-bottom: 30px;
+    margin-top: 53px;
+    margin-bottom: 35px;
     width: 200px;
   }
 
@@ -89,8 +108,34 @@
 }
 
 @media (min-width: 1200px) {
+  .download-app__wrapper {
+    margin-left: 23px;
+  }
+
   .download-app {
-    width: 940px;
-    margin-top: -657px;
+    width: 1050px;
+    margin-top: -665px;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 70px 20px;
+    padding-bottom: 166px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
+  }
+
+  .download-app__title {
+    font-size: 50px;
+    line-height: 60px;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 53px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .download-app__list {
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 }

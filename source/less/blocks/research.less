@@ -4,11 +4,35 @@
 
 @media (min-width: 660px) {
   .research__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 320px;
-    padding-top: 60px;
+    width: 300px;
+    line-height: 24px;
+    padding-top: 96px;
+    padding-left: 315px;
+    padding-bottom: 75px;
     margin: 0 auto;
+    background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+    background-position: 23px 114px, 5px 59px;
+    background-repeat: no-repeat;
+    background-size: 204px 204px, 241px 278px;
+
+    &::before {
+      content: "24";
+      display: block;
+      position: absolute;
+      top: 110px;
+      left: 24px;
+      width: 205px;
+      height: 205px;
+      text-align: center;
+      font-size: 100px;
+      font-weight: 700;
+      line-height: 200px;
+      color: #d22856;
+      background-size: contain;
+    }
   }
 
   .research__title {
@@ -29,7 +53,17 @@
   }
 
   .research__wrapper {
-    width: 570px;
+    width: 530px;
+    padding-top: 157px;
+    padding-left: 365px;
+    background-size: 253px 253px, 298px 345px;
+    background-position: 23px 136px, 0 66px;
+
+    &::before {
+      font-size: 120px;
+      top: 150px;
+      left: 43px;
+    }
   }
 
   .research__title {
@@ -38,6 +72,7 @@
 
   .research__text {
     font-size: @medium-font;
+    line-height: 30px;
   }
 
   .research__link {
