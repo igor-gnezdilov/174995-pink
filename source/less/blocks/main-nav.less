@@ -3,8 +3,31 @@
 }
 
 .main-nav__logo-link {
-  padding-top: 22px;
-  padding-bottom: 13px;
+  padding-top: 21px;
+  padding-bottom: 11px;
+  cursor: pointer;
+
+  svg:hover {
+    fill: @strong-pink;
+  }
+
+  svg:active {
+    fill: @white;
+    opacity: 0.3;
+  }
+}
+
+.main-nav__logo-link_index {
+  cursor: auto;
+
+  svg:hover {
+    fill: @white;
+  }
+
+  svg:active {
+    fill: @white;
+    opacity: 1;
+  }
 }
 
 .main-nav__logo-tablet,
@@ -27,7 +50,7 @@
 .main-nav__toggle {
   display: block;
   position: relative;
-  top: 17px;
+  top: 16px;
   right: 0;
   width: 50px;
   height: 29px;
@@ -73,7 +96,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .main-nav {
     display: flex;
     justify-content: space-between;

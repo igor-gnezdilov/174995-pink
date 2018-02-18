@@ -1,9 +1,10 @@
 .popup__success_hidden,
 .popup__failure_hidden {
-  display: none;
+  display: block;
 }
 
 .popup {
+  display: none;
   position: fixed;
   width: 100%;
   padding-top: 36px;
@@ -22,7 +23,7 @@
 
 .popup__failure {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 }
 
 .popup__title {
@@ -80,31 +81,34 @@
   .popup__title {
     font-size: 30px;
     line-height: 40px;
-
-    &_success {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
   }
 
   .popup__message {
     font-size: @medium-font;
-    width: 300px;
 
     &_success {
       margin-top: 20px;
+      width: 320px;
     }
 
     &_failure {
       margin-bottom: 35px;
+      width: 300px;
+    }
+
+    &_transfer {
+      display: none;
     }
   }
 
   .popup__failure {
+    padding-top: 35px;
     padding-bottom: 52px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .popup__success {
     width: 780px;
   }

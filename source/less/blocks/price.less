@@ -37,10 +37,14 @@
   text-transform: @text-transform;
 }
 
+.price__head th:nth-child(2) {
+  border-left: none;
+}
+
 .price__title {
   min-width: 278px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 19px;
+  padding-bottom: 19px;
   border-left: 2px solid #e5e5e5;
 
   &_hidden {
@@ -178,7 +182,6 @@
       text-transform: none;
       border-bottom: 2px solid #e5e5e5;
       border-left: 2px solid #e5e5e5;
-      border-right: 2px solid #e5e5e5;
     }
 
     &_yes,
@@ -189,7 +192,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
   .price {
     padding-top: 150px;
     padding-bottom: 95px;
@@ -209,7 +212,7 @@
 
   .price__title {
     font-size: @medium-font;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
 
     &_tape::before {
